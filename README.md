@@ -1,12 +1,52 @@
-# Template - Tutorial Portfólio 2023
+# Portfolio - Igor de Moura
 
-![image](https://github.com/gbdev-labs/template-portfolio-tutorial-2023/assets/71772559/ade0ec7a-cb22-4c5c-a4fa-183ab380357e)
+This repository contains the source code for my online portfolio.
+
+## ⚙️ Technologies Used
+
+* **Next.js 13:** React framework for web development.
+* **TypeScript:** Language that adds static typing to JavaScript.
+* **Tailwind CSS:** Utility-first framework for fast and efficient styling.
+* **Framer Motion:** Library for smooth animations and transitions.
+* **Hygraph CMS:** Headless CMS platform for content management.
 
 
-Este é um template básico que será usado na [série do YouTube](https://youtube.com/playlist?list=PLY_G6KZ7jlfU41bdaWpTsOnfCC7bmpJcL) para criar um Portfólio com as ferramentas mais recentes de desenvolvimento web. O template inclui o Next.js 13, Tailwind CSS, Hygraph CMS, TypeScript e Framer Motion, que são as tecnologias principais que serão usadas na série.
+## 🚀 How to Run the Project
 
-O objetivo deste template é fornecer um ponto de partida para os espectadores que acompanham a série de tutoriais e desejam seguir juntamente com a construção do portfólio. Ele inclui a estrutura básica do projeto e os arquivos necessários para iniciar o desenvolvimento do portfólio.
+1. **Clone the repository:**
 
-Ao usar este template, você poderá seguir os tutoriais da série passo a passo e criar um portfólio profissional e impressionante com as mais recentes tecnologias de desenvolvimento web.
+   ```bash
+   git clone https://github.com/gbdev-labs/template-portfolio-tutorial-2023.git
+   ```
 
-[**Projeto final**](https://github.com/GBDev13/portfolio-tutorial-2023)
+2. **Install the dependencies:**
+
+   ```bash
+   cd <folder-name> # Replace <folder-name> with the name of the folder where you cloned the project.
+   yarn install # or npm install
+   ```
+
+3. **Configure Hygraph CMS:**
+
+    - Create a Hygraph account if you don't already have one.
+    - Create a new project and configure the schema as needed.
+    - Copy your Hygraph API access token.
+
+4. **Configure environment variables:**
+
+    - Create a `.env.local` file in the root of the project.
+    - Paste your Hygraph token and set other environment variables if necessary:
+
+   ```
+   HYGRAPH_TOKEN=YOUR_HYGRAPH_TOKEN
+   # Other environment variables...
+   ```
+
+5. **Run the project in development mode:**
+
+   ```bash
+   yarn dev # or npm run dev
+   ```
+
+The project will be available at: `http://localhost:3000`
+
