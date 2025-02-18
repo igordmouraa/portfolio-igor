@@ -16,7 +16,7 @@ This repository contains the source code for my online portfolio.
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/gbdev-labs/template-portfolio-tutorial-2023.git
+   git clone https://github.com/igordmouraa/portfolio-igor
    ```
 
 2. **Install the dependencies:**
