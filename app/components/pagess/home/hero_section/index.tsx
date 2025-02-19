@@ -1,88 +1,165 @@
 'use client'
 
-import {Framer} from "@/app/components/pagess/home/hero_section/framer";
-import Image from "next/image";
-import {TechBadge} from "@/app/components/tech_badge";
-import {Button} from "@/app/components/button";
-import {HiArrowNarrowRight, TbBrandDiscord, TbBrandGithub, TbBrandInstagram, TbBrandLinkedin} from "react-icons/all";
+import { motion } from 'framer-motion'
+import Image from "next/image"
+import { TechBadge } from "@/app/components/tech_badge"
+import { Button } from "@/app/components/button"
+import { HiArrowNarrowRight, TbBrandDiscord, TbBrandGithub, TbBrandInstagram, TbBrandLinkedin } from "react-icons/all"
+import Typewriter from 'typewriter-effect'
+import { Framer } from "@/app/components/pagess/home/hero_section/framer" // Seu componente Framer
 
 const Mock_Contacts = [
     {
         url: 'https://github.com/igordmouraa',
-        icon: <TbBrandGithub/>
+        icon: <TbBrandGithub />,
+        label: 'GitHub'
     },
     {
         url: 'https://www.linkedin.com/in/igordmoura/',
-        icon: <TbBrandLinkedin/>
+        icon: <TbBrandLinkedin />,
+        label: 'LinkedIn'
     },
     {
         url: 'https://github.com/igordmouraa',
-        icon: <TbBrandDiscord/>
+        icon: <TbBrandDiscord />,
+        label: 'Discord'
     },
     {
         url: 'https://www.instagram.com/igordmouraa/',
-        icon: <TbBrandInstagram/>
+        icon: <TbBrandInstagram />,
+        label: 'Instagram'
     },
 ]
 
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.2,
+            delayChildren: 0.3
+        }
+    }
+}
+
+const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+        y: 0,
+        opacity: 1,
+        transition: { type: 'spring', stiffness: 100 }
+    }
+}
+
 export const HeroSection = () => {
+    const handleContact = () => {
+        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+    }
+
     return (
-        <section className={'w-full lg:h-[755px] flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[110px]'}>
-            <Framer/>
+        <section className="w-full lg:h-[755px] flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[110px] relative">
+            <Framer /> {/* Seu componente de efeito personalizado */}
 
-            <div className={'container flex items-start justify-between flex-col-reverse lg:flex-row'}>
-                <div className={'w-full lg:max-w-[530px] '}>
-                    <p className={'font-mono text-purple-600'}>Olá, meu nome é</p>
-                    <h2 className={'text-4xl font-medium mt-2'}>Igor Moura</h2>
+            <div className="container flex items-start justify-between flex-col-reverse lg:flex-row">
+                <motion.div
+                    className="w-full lg:max-w-[530px] z-10"
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                >
+                    <motion.p
+                        className="font-mono text-purple-400 mb-2"
+                        variants={itemVariants}
+                    >
+                        Olá, meu nome é
+                    </motion.p>
 
-                    <p className={'text-gray-400 my-6 text-sm sm:text-base'}>Olá, meu nome é Igor Moura e sou um
-                        desenvolvedor full-stack apaixonado por tecnologia. Com
-                        mais de 2 anos de experiência. Meu objetivo é criar sistemas robustos e funcionais, além de
-                        participar de equipes técnicas em projetos desafiadores. Estou sempre aberto a novas
-                        oportunidades e desafios.
-                    </p>
+                    <motion.h1
+                        className="text-4xl font-medium text-gray-50"
+                        variants={itemVariants}
+                    >
+                        <Typewriter
+                            options={{
+                                strings: ['Igor Moura'],
+                                autoStart: true,
+                                loop: true,
+                                cursor: '_',
+                                delay: 100
+                            }}
+                        />
+                    </motion.h1>
 
-                    <div className={'flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[348px'}>
-                            <TechBadge  name="Next.js"/>
-                            <TechBadge  name="Tailwind CSS"/>
-                            <TechBadge  name="NodeJs"/>
-                            <TechBadge  name="Sequelize"/>
-                            <TechBadge  name="Typescript"/>
-                            <TechBadge  name="Mongo DB"/>
-                            <TechBadge  name="Firebase"/>
-                            <TechBadge  name="Vercel"/>
-                    </div>
+                    <motion.p
+                        className="text-gray-300 my-6 text-sm sm:text-base"
+                        variants={itemVariants}
+                    >
+                        Sou um desenvolvedor full-stack apaixonado por tecnologia com mais de 2 anos de experiência.
+                        Meu objetivo é criar sistemas robustos e participar de projetos desafiadores.
+                    </motion.p>
 
-                    <div className={'mt-6 lg:mt-10 flex sm:items-center sm:gap-5 flex-col sm:flex-row'}>
-                        <Button className={'w-max shadow-button hover:bg-purple-950'}>
-                            Entre em contato
-                            <HiArrowNarrowRight className={'text-gray-50'}/>
-                        </Button>
+                    <motion.div
+                        className="flex flex-wrap gap-x-2 gap-y-3"
+                        variants={containerVariants}
+                    >
+                        {['Next.js', 'Tailwind CSS', 'NodeJs', 'Sequelize', 'Typescript', 'Mongo DB', 'Firebase', 'Vercel']
+                            .map((tech, index) => (
+                                <TechBadge
+                                    key={index}
+                                    name={tech}
+                                    className="text-xs"
+                                />
+                            ))}
+                    </motion.div>
 
-                        <div className={'text-gray-600 flex items-center gap-3 h-20'}>
+                    <motion.div
+                        className="mt-6 lg:mt-10 flex sm:items-center sm:gap-5 flex-col sm:flex-row"
+                        variants={containerVariants}
+                    >
+                        <motion.div variants={itemVariants}>
+                            <Button
+                                className="w-max hover:bg-purple-800 group border border-purple-400"
+                                onClick={handleContact}
+                            >
+                                Entre em contato
+                                <HiArrowNarrowRight className="ml-2 transform group-hover:translate-x-1 transition-transform" />
+                            </Button>
+                        </motion.div>
+
+                        <motion.div
+                            className="flex items-center gap-3 mt-4 sm:mt-0"
+                            variants={containerVariants}
+                        >
                             {Mock_Contacts.map((contact, index) => (
-                                <a
-                                    href={contact.url}
+                                <motion.a
                                     key={`contact-${index}`}
+                                    href={contact.url}
                                     target="_blank"
-                                    className={' hover:text-gray-100 transition-colors'}
+                                    rel="noopener noreferrer"
+                                    className="text-gray-300 hover:text-purple-400 transition-colors"
+                                    variants={itemVariants}
+                                    aria-label={`Visitar perfil no ${contact.label}`}
+                                    whileHover={{ scale: 1.2 }}
+                                    whileTap={{ scale: 0.9 }}
                                 >
                                     {contact.icon}
-                                </a>
+                                </motion.a>
                             ))}
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
+                </motion.div>
 
-
-                </div>
-
-                <Image
-                    width={420}
-                    height={404}
-                    className={'z-10 rounded-lg w-[300px] h-[400px] mb-6 lg:mb-0 shadow-2xl object-cover'}
-                    src="/images/igor-pic.png"
-                    alt={'Foto de Igor Moura'}
-                />
+                <motion.div
+                    className="relative w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] mb-6 lg:mb-0 z-10"
+                    variants={itemVariants}
+                >
+                    <Image
+                        src="/images/igor-pic.png"
+                        alt="Foto de Igor Moura"
+                        layout="fill"
+                        className="rounded-lg object-cover shadow-2xl"
+                        priority
+                    />
+                </motion.div>
             </div>
         </section>
     )
