@@ -1,11 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
+  // Configurações opcionais:
   images: {
-    domains: ['media.graphassets.com'],
-  },
+    domains: ['seus-domínios-de-imagem.com']
+  }
 }
 
 module.exports = nextConfig
