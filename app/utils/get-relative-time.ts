@@ -40,7 +40,7 @@ export function getRelativeTimeString(
         (cutoff) => cutoff > Math.abs(deltaSeconds),
     )
 
-    // Get the divisor to divide from the seconds. E.g. if our unit is "day" our divisor
+    // Get the divider to divide from the seconds. E.g. if our unit is "day" our divider
     // is one day in seconds, so we can divide our seconds by this to get the # of days
     const divisor = unitIndex ? cutoffs[unitIndex - 1] : 1
 
