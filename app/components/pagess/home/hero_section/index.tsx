@@ -153,7 +153,7 @@ export const HeroSection = () => {
                     variants={itemVariants}
                 >
                     <Image
-                        src="/images/igor-pic.png"
+                        src="https://avatars.githubusercontent.com/u/127807075?v=4"
                         alt="Foto de Igor Moura"
                         layout="fill"
                         className="rounded-lg object-cover shadow-2xl"
