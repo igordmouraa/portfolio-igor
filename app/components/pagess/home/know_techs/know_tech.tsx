@@ -3,10 +3,11 @@ import {getRelativeTimeString} from "@/app/utils/get-relative-time";
 
 type KnowTechProps = {
     tech: {
-        icon: ReactNode
-        name: string
-        startDate: string
-    }
+        icon: ReactNode;
+        name: string;
+        startDate: string;
+    };
+    className?: string;
 }
 
 export const KnowTech = ({tech}: KnowTechProps) => {
