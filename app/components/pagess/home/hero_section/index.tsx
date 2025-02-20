@@ -11,22 +11,22 @@ import { Framer } from "@/app/components/pagess/home/hero_section/framer" // Seu
 const Mock_Contacts = [
     {
         url: 'https://github.com/igordmouraa',
-        icon: <TbBrandGithub />,
+        icon: <TbBrandGithub size={24}/>,
         label: 'GitHub'
     },
     {
         url: 'https://www.linkedin.com/in/igordmoura/',
-        icon: <TbBrandLinkedin />,
+        icon: <TbBrandLinkedin size={24}/>,
         label: 'LinkedIn'
     },
     {
         url: 'https://github.com/igordmouraa',
-        icon: <TbBrandDiscord />,
+        icon: <TbBrandDiscord size={24}/>,
         label: 'Discord'
     },
     {
         url: 'https://www.instagram.com/igordmouraa/',
-        icon: <TbBrandInstagram />,
+        icon: <TbBrandInstagram size={24}/>,
         label: 'Instagram'
     },
 ]
@@ -58,7 +58,7 @@ export const HeroSection = () => {
 
     return (
         <section className="w-full lg:h-[755px] flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[110px] relative">
-            <Framer /> {/* Seu componente de efeito personalizado */}
+            <Framer />
 
             <div className="container flex items-start justify-between flex-col-reverse lg:flex-row">
                 <motion.div
