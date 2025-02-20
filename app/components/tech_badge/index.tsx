@@ -1,5 +1,7 @@
 type TechBadgeProps = {
     name: string;
+    className?: string;
+
 }
 
 export const TechBadge = ({name} : TechBadgeProps) => {
