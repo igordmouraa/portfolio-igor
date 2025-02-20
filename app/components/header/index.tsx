@@ -9,7 +9,7 @@ const nav_itens = [
     },
     {
         label: 'Projetos',
-        href: '/projects'
+        href: '/'
     }
 ]
 
