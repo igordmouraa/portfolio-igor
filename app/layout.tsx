@@ -15,6 +15,37 @@ const plexMono = IBM_Plex_Mono({
   weight: ['400', '500'],
 })
 
+export const metadata = {
+    title: "Igor's Portfolio",
+    icons: {
+        icon: "/images/favicon-512x512.png",
+        shortcut: "/images/favicon-256x256.png",
+    },
+    openGraph: {
+        images: [
+            {
+                url: "/igor-metadata.png",
+                width: 1200,
+                height: 630,
+                alt: "Igor's Portfolio",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        images: [
+            {
+                url: "/igor-metadata.png",
+                width: 1200,
+                height: 630,
+                alt: "Igor's Portfolio",
+            },
+        ],
+    },
+
+};
+
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR" className={`${inter.variable} ${plexMono.variable}`}>
