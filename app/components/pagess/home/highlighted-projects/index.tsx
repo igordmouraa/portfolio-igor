@@ -1,26 +1,27 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { SectionTitle } from "@/app/components/section_title"
-import { Button } from "@/app/components/button"
-import { TbBrandGithub } from "react-icons/tb"
-import { FiGlobe } from "react-icons/fi"
+import {motion} from 'framer-motion'
+import {SectionTitle} from "@/app/components/section_title"
+import {Button} from "@/app/components/button"
+import {TbBrandGithub} from "react-icons/tb"
+import {FiGlobe} from "react-icons/fi"
 import Image from "next/image"
+import {HorizontalDivider} from "@/app/components/divider";
 
 const projects = [
     {
-        title: "BookWise",
-        description: "Plataforma de avaliação de livros desenvolvida durante o bootcamp Ignite da Rocketseat. Projeto Full Stack com Next.js implementado a partir de um design no Figma.",
-        technologies: ["Next.js", "Next Auth", "Stitches", "TypeScript", "Prisma", "React Query", "Radix"],
-        github: "#",
-        demo: "#",
-        image: "/projects/bookwise.png"
+        title: "PetExpress - Sistema de gerenciador de Pet Shops",
+        description: "Este sistema para pet shops foi construído com foco em proporcionar uma experiência fluida e completa para gerenciar pets, produtos, agendamentos, pedidos e pagamentos – tudo em um só lugar. Com uma interface amigável e intuitiva, o sistema possibilita que os usuários naveguem facilmente entre funcionalidades, sempre com foco na praticidade e na eficiência.",
+        technologies: ["React", "Vite", "Node.js", "Javascript", "Sequelize", "JWT", "MySQL", "Firebase", "Github Actions", "CI/CD", "Vercel"],
+        github: "https://github.com/TypeBlast/projectWeb",
+        demo: "https://petexpress-typeblast.vercel.app/",
+        image: "/images/petexpress.png"
     },
-    // Adicione mais projetos aqui
+
 ]
 
 const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: {opacity: 0},
     visible: {
         opacity: 1,
         transition: {
@@ -31,11 +32,11 @@ const containerVariants = {
 }
 
 const projectVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: {opacity: 0, y: 50},
     visible: {
         opacity: 1,
         y: 0,
-        transition: { type: 'spring', stiffness: 120, damping: 20 }
+        transition: {type: 'spring', stiffness: 120, damping: 20}
     }
 }
 
@@ -43,12 +44,12 @@ export const HighlightedProjects = () => {
     return (
         <section className="container py-16">
             <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
+                initial={{opacity: 0, x: -50}}
+                whileInView={{opacity: 1, x: 0}}
+                transition={{duration: 0.5}}
+                viewport={{once: true}}
             >
-                <SectionTitle title="Projetos em destaque" subtitle="destaques" />
+                <SectionTitle title="Projetos em destaque" subtitle="destaques"/>
             </motion.div>
 
             <motion.div
@@ -56,7 +57,7 @@ export const HighlightedProjects = () => {
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
+                viewport={{once: true}}
             >
                 {projects.map((project, index) => (
                     <motion.div
@@ -67,8 +68,8 @@ export const HighlightedProjects = () => {
                         {/* Lado esquerdo - Imagem */}
                         <motion.div
                             className="md:w-1/2 relative group"
-                            whileHover={{ scale: 1.05 }}
-                            transition={{ type: 'spring', stiffness: 200 }}
+                            whileHover={{scale: 1.05}}
+                            transition={{type: 'spring', stiffness: 200}}
                         >
                             <Image
                                 src={project.image}
@@ -103,7 +104,7 @@ export const HighlightedProjects = () => {
                                     className="text-gray-100 hover:text-purple-400 bg-transparent hover:bg-purple-500/10 px-6 py-3"
                                     href={project.github}
                                 >
-                                    <TbBrandGithub className="mr-2 text-lg" />
+                                    <TbBrandGithub className="mr-2 text-lg"/>
                                     Repositório
                                 </Button>
 
@@ -111,7 +112,7 @@ export const HighlightedProjects = () => {
                                     className="text-gray-100 hover:text-purple-400 bg-transparent hover:bg-purple-500/10 px-6 py-3"
                                     href={project.demo}
                                 >
-                                    <FiGlobe className="mr-2 text-lg" />
+                                    <FiGlobe className="mr-2 text-lg"/>
                                     Ver projeto
                                 </Button>
                             </div>
@@ -119,6 +120,7 @@ export const HighlightedProjects = () => {
                     </motion.div>
                 ))}
             </motion.div>
+            <HorizontalDivider/>
         </section>
     )
 }
