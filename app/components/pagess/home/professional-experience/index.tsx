@@ -25,7 +25,6 @@ export const ProfessionalExperience = () => {
                 </p>
 
                 <div className="relative">
-                    {/* Linha do tempo */}
                     <div className="absolute left-4 md:left-1/2 top-0 w-[2px] h-full bg-gray-800/50 md:transform md:-translate-x-1/2" />
 
                     {experiences.map((experience, index) => (
@@ -36,10 +35,8 @@ export const ProfessionalExperience = () => {
                             transition={{ duration: 0.5, delay: index * 0.2 }}
                             className="relative pl-8 md:pl-0 mb-12 md:mb-16"
                         >
-                            {/* Ponto da linha do tempo */}
                             <div className="absolute left-0 md:left-1/2 top-1 w-4 h-4 rounded-full bg-purple-500 border-4 border-[#09090B] z-10 md:transform md:-translate-x-1/2" />
 
-                            {/* Conteúdo */}
                             <div className="md:ml-[calc(50%+24px)]">
                                 <div className="space-y-1 md:space-y-2">
                                     <h3 className="text-xl md:text-2xl font-bold text-gray-100">@{experience.company}</h3>
