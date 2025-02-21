@@ -42,7 +42,7 @@ const projectVariants = {
 
 export const HighlightedProjects = () => {
     return (
-        <section className="container py-16">
+        <section className="container py-16" id="projects">
             <motion.div
                 initial={{opacity: 0, x: -50}}
                 whileInView={{opacity: 1, x: 0}}
