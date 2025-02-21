@@ -5,7 +5,7 @@ import { NavItem } from "@/app/components/header/nav_item";
 
 const nav_items = [
     { label: 'Home', href: '/' },
-    { label: 'Projetos', href: '/projects' }
+    { label: 'Projetos', href: '#projects' }
 ];
 
 // Animations configuration
