@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import Image from "next/image"
 import { TechBadge } from "@/app/components/tech_badge"
 import { Button } from "@/app/components/button"
-import { HiArrowNarrowRight, TbBrandDiscord, TbBrandGithub, TbBrandInstagram, TbBrandLinkedin } from "react-icons/all"
+import { HiArrowNarrowRight, MdOutlineEmail, TbBrandGithub, TbBrandInstagram, TbBrandLinkedin } from "react-icons/all"
 import Typewriter from 'typewriter-effect'
 import { Framer } from "@/app/components/pagess/home/hero_section/framer" // Seu componente Framer
 
@@ -20,9 +20,9 @@ const Mock_Contacts = [
         label: 'LinkedIn'
     },
     {
-        url: 'https://github.com/igordmouraa',
-        icon: <TbBrandDiscord size={24}/>,
-        label: 'Discord'
+        url: 'mailto:igordmoura_@hotmail.com',
+        icon: <MdOutlineEmail size={24}/>,
+        label: 'Email'
     },
     {
         url: 'https://www.instagram.com/igordmouraa/',
