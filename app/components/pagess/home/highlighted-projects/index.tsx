@@ -17,6 +17,14 @@ const projects = [
         demo: "https://petexpress-typeblast.vercel.app/",
         image: "/images/petexpress.png"
     },
+    {
+        title: "Projeto Marvel Comics",
+        description: "O projeto foi estruturado de forma modular, com uma organização clara de pastas e componentes reutilizáveis. Além disso, a integração com a API da Marvel foi feita de forma eficiente, garantindo uma experiência fluida para o usuário.",
+        technologies: ["Next.js", "React", "TypeScript", "Marvel API", "Framer Motion", "Lucide Icons", "Tailwind CSS"],
+        github: "https://github.com/igordmouraa/marvel-comics",
+        demo: "https://marvel-comics-lac.vercel.app/",
+        image: "/images/marvel-pic.png"
+    },
 
 ]
 
