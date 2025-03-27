@@ -26,6 +26,15 @@ const projects = [
         image: "/images/marvel-pic.png"
     },
 
+    {
+        title: "Scaffold CLI",
+        description: "O Scaffold CLI é uma CLI (Command-Line Interface) que gera templates de API prontos para uso, já configurados para se conectar a bancos de dados como 🗄️ MySQL, 🐘 PostgreSQL ou 🌲 MongoDB. Com o Scaffold CLI, é possível criar um projeto de API em segundos, sem a necessidade de configurar tudo manualmente.",
+        technologies: ["Node.js", "TypeScript", "Inquirer.js", "Chalk", "Ora", "Express", "Fastify", "MySQL", "PostgreSQL", "MongoDB",],
+        github: "https://github.com/ScaffoldAPI/scaffold",
+        demo: "https://www.npmjs.com/package/scaffold-api",
+        image: "/images/icon.png"
+    },
+
 ]
 
 const containerVariants = {
