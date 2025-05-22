@@ -9,8 +9,9 @@ const experiences = [
         company: "Freelancer",
         role: "Desenvolvedor Fullstack",
         duration: "Março 2023 - Momento atual • (1 ano e 11 meses)",
-        description: "Desenvolvimento e manutenção de Interfaces utilizando React, Next, Tailwind, Typescript e Figma. Para o planejamento dos sprints, é utilizado o Github.",
-        technologies: ["Next.js", "Tailwind CSS", "Node.js", "Sequelize", "Typescript"]
+        description: "Atuação no desenvolvimento e manutenção de interfaces web responsivas utilizando React, Next.js, Tailwind CSS e TypeScript, com prototipação feita no Figma. No backend, desenvolvimento de APIs escaláveis com Node.js e NestJS, integrando bancos de dados como PostgreSQL e Firebase. Utilização de Docker para ambientes isolados e Vercel para deploys ágeis.\n" +
+            "Planejamento de sprints e versionamento realizados via GitHub Projects e Git.",
+        technologies: ['Node.js','NestJs','Typescript', 'PostgreSQL', 'Firebase', 'Docker', 'Next.js', 'Tailwind CSS', 'Vercel']
     }
 ]
 
@@ -21,7 +22,7 @@ export const ProfessionalExperience = () => {
 
             <div className="mt-8 md:mt-12">
                 <p className="text-gray-400 mb-8 md:mb-12 max-w-[600px] text-sm md:text-base">
-                    Estou sempre aberto a novos desafios e projetos emocionantes. Vamos trabalhar juntos para criar soluções incríveis para sua empresa!
+                    Estou aberto a novos desafios e projetos que façam a diferença. Busco uma posição como Desenvolvedor Full Stack onde possa contribuir para a criação de aplicações escaláveis e gerar impacto real nos resultados da empresa.
                 </p>
 
                 <div className="relative">
