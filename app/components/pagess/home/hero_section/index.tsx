@@ -1,12 +1,12 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import {motion} from 'framer-motion'
 import Image from "next/image"
-import { TechBadge } from "@/app/components/tech_badge"
-import { Button } from "@/app/components/button"
-import { HiArrowNarrowRight, MdOutlineEmail, TbBrandGithub, TbBrandInstagram, TbBrandLinkedin } from "react-icons/all"
+import {TechBadge} from "@/app/components/tech_badge"
+import {Button} from "@/app/components/button"
+import {HiArrowNarrowRight, MdOutlineEmail, TbBrandGithub, TbBrandInstagram, TbBrandLinkedin} from "react-icons/all"
 import Typewriter from 'typewriter-effect'
-import { Framer } from "@/app/components/pagess/home/hero_section/framer" // Seu componente Framer
+import {Framer} from "@/app/components/pagess/home/hero_section/framer" // Seu componente Framer
 
 const Mock_Contacts = [
     {
@@ -32,7 +32,7 @@ const Mock_Contacts = [
 ]
 
 const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: {opacity: 0},
     visible: {
         opacity: 1,
         transition: {
@@ -43,22 +43,22 @@ const containerVariants = {
 }
 
 const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: {y: 20, opacity: 0},
     visible: {
         y: 0,
         opacity: 1,
-        transition: { type: 'spring', stiffness: 100 }
+        transition: {type: 'spring', stiffness: 100}
     }
 }
 
 export const HeroSection = () => {
     const handleContact = () => {
-        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+        document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})
     }
 
     return (
         <section className="w-full lg:h-[755px] flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[110px] relative">
-            <Framer />
+            <Framer/>
 
             <div className="container flex items-start justify-between flex-col-reverse lg:flex-row">
                 <motion.div
@@ -93,15 +93,15 @@ export const HeroSection = () => {
                         className="text-gray-300 my-6 text-sm sm:text-base"
                         variants={itemVariants}
                     >
-                        Sou um desenvolvedor full-stack apaixonado por tecnologia com mais de 2 anos de experiência.
-                        Meu objetivo é criar sistemas robustos e participar de projetos desafiadores.
+                        Sou um desenvolvedor full-stack em constante evolução, com foco em Node.js, React e TypeScript.
+                        Busco contribuir com soluções escaláveis e de alta qualidade em projetos desafiadores.
                     </motion.p>
 
                     <motion.div
                         className="flex flex-wrap gap-x-2 gap-y-3"
                         variants={containerVariants}
                     >
-                        {['Next.js', 'Tailwind CSS', 'NodeJs', 'Sequelize', 'Typescript', 'Mongo DB', 'Firebase', 'Vercel']
+                        {['Node.js','NestJs','Typescript', 'PostgreSQL', 'Firebase', 'Docker', 'Next.js', 'Tailwind CSS', 'Vercel']
                             .map((tech, index) => (
                                 <TechBadge
                                     key={index}
@@ -121,7 +121,8 @@ export const HeroSection = () => {
                                 onClick={handleContact}
                             >
                                 Entre em contato
-                                <HiArrowNarrowRight className="ml-2 transform group-hover:translate-x-1 transition-transform" />
+                                <HiArrowNarrowRight
+                                    className="ml-2 transform group-hover:translate-x-1 transition-transform"/>
                             </Button>
                         </motion.div>
 
@@ -138,8 +139,8 @@ export const HeroSection = () => {
                                     className="text-gray-300 hover:text-purple-400 transition-colors"
                                     variants={itemVariants}
                                     aria-label={`Visitar perfil no ${contact.label}`}
-                                    whileHover={{ scale: 1.2 }}
-                                    whileTap={{ scale: 0.9 }}
+                                    whileHover={{scale: 1.2}}
+                                    whileTap={{scale: 0.9}}
                                 >
                                     {contact.icon}
                                 </motion.a>

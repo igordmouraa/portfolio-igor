@@ -1,6 +1,6 @@
 import {ReactNode} from "react";
 import { motion } from 'framer-motion'
-import {getRelativeTimeString} from "@/app/utils/get-relative-time";
+// import {getRelativeTimeString} from "@/app/utils/get-relative-time";
 
 type KnowTechProps = {
     tech: {
@@ -12,7 +12,7 @@ type KnowTechProps = {
 }
 
 export const KnowTech = ({ tech }: KnowTechProps) => {
-    const relativeTime = getRelativeTimeString(new Date(tech.startDate), 'pt-BR').replace('há', '');
+    // const relativeTime = getRelativeTimeString(new Date(tech.startDate), 'pt-BR').replace('há', '');
 
     return (
         <motion.div
@@ -24,7 +24,6 @@ export const KnowTech = ({ tech }: KnowTechProps) => {
                 <p className='font-medium'>{tech.name}</p>
                 {tech.icon}
             </div>
-            <span>{relativeTime} de experiência</span>
         </motion.div>
     );
 }

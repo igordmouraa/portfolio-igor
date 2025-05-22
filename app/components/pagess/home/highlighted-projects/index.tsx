@@ -11,7 +11,7 @@ import {HorizontalDivider} from "@/app/components/divider";
 const projects = [
     {
         title: "PetExpress - Sistema de gerenciador de Pet Shops",
-        description: "Este sistema para pet shops foi construído com foco em proporcionar uma experiência fluida e completa para gerenciar pets, produtos, agendamentos, pedidos e pagamentos – tudo em um só lugar. Com uma interface amigável e intuitiva, o sistema possibilita que os usuários naveguem facilmente entre funcionalidades, sempre com foco na praticidade e na eficiência.",
+        description: "PetExpress é um sistema completo para pet shops, focado em escalabilidade, usabilidade e organização modular. Permite gerenciar pets, produtos, agendamentos, pedidos e pagamentos em um só lugar. O projeto trouxe desafios como a implementação de autenticação e autorização por perfil (cliente, atendente e admin) e o mapeamento eficiente das entidades no banco de dados. A experiência reforçou meu domínio em APIs RESTful, integrações externas e boas práticas de arquitetura.",
         technologies: ["React", "Vite", "Node.js", "Javascript", "Sequelize", "JWT", "MySQL", "Firebase", "Github Actions", "CI/CD", "Vercel"],
         github: "https://github.com/TypeBlast/projectWeb",
         demo: "https://petexpress-typeblast.vercel.app/",
@@ -19,7 +19,7 @@ const projects = [
     },
     {
         title: "Projeto Marvel Comics",
-        description: "O projeto foi estruturado de forma modular, com uma organização clara de pastas e componentes reutilizáveis. Além disso, a integração com a API da Marvel foi feita de forma eficiente, garantindo uma experiência fluida para o usuário.",
+        description: "Projeto estruturado com foco em modularidade e reutilização de componentes. O principal desafio foi a autenticação com a API da Marvel, que exigiu a criação de uma camada de abstração para geração de hash MD5 e paginação dinâmica. A experiência fortaleceu meus conhecimentos em consumo de APIs complexas e organização de código assíncrono.",
         technologies: ["Next.js", "React", "TypeScript", "Marvel API", "Framer Motion", "Lucide Icons", "Tailwind CSS"],
         github: "https://github.com/igordmouraa/marvel-comics",
         demo: "https://marvel-comics-lac.vercel.app/",
@@ -28,7 +28,7 @@ const projects = [
 
     {
         title: "Scaffold CLI",
-        description: "O Scaffold CLI é uma CLI (Command-Line Interface) que gera templates de API prontos para uso, já configurados para se conectar a bancos de dados como 🗄️ MySQL, 🐘 PostgreSQL ou 🌲 MongoDB. Com o Scaffold CLI, é possível criar um projeto de API em segundos, sem a necessidade de configurar tudo manualmente.",
+        description: "O Scaffold é uma CLI que automatiza a criação de APIs com suporte a MySQL, PostgreSQL e MongoDB. O principal desafio foi estruturar um gerador flexível e reutilizável, capaz de configurar projetos completos em segundos. Com isso, aprofundei meus conhecimentos em automação de setups e integração com diferentes bancos de dados.",
         technologies: ["Node.js", "TypeScript", "Inquirer.js", "Chalk", "Ora", "Express", "Fastify", "MySQL", "PostgreSQL", "MongoDB",],
         github: "https://github.com/ScaffoldAPI/scaffold",
         demo: "https://www.npmjs.com/package/scaffold-api",
