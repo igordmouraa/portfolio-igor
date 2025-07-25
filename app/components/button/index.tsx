@@ -1,12 +1,14 @@
-import { ButtonHTMLAttributes, AnchorHTMLAttributes } from "react";
+import {ButtonHTMLAttributes, AnchorHTMLAttributes} from "react";
 import Link from "next/link";
-import { cn } from "@/app/lib/utils";
+import {cn} from "@/app/lib/utils";
 
 type ButtonProps = (ButtonHTMLAttributes<HTMLButtonElement> | AnchorHTMLAttributes<HTMLAnchorElement>) & {
     href?: string;
+    as: "button" | "a";
+    onClick?: () => void;
 };
 
-export const Button = ({ children, className, href, ...props }: ButtonProps) => {
+export const Button = ({children, className, href, ...props}: ButtonProps) => {
     const combinedClasses = cn(
         "bg-purple-600 text-gray-50 px-4 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-purple-950 transition-all disabled:opacity-50",
         className
