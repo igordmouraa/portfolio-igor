@@ -3,36 +3,42 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-gray-900 text-gray-100
-  }
+    body {
+        @apply bg-gray-900 text-gray-100
+    }
 }
 
 .container {
-  @apply mx-auto w-full max-w-[1200px] px-6
+    @apply mx-auto w-full max-w-[1200px] px-6
 }
 
 *::-webkit-scrollbar {
-  width: 8px;
+    width: 8px;
 }
 
 *::-webkit-scrollbar-track {
-  background: #374151;
-  border-radius: 5px;
+    background: #374151;
+    border-radius: 5px;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #613cc1;
-  border-radius: 14px;
+    background-color: #613cc1;
+    border-radius: 14px;
 }
 
 @keyframes gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .bg-gradient-animated {
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
 }
