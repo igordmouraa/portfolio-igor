@@ -6,11 +6,11 @@ import {TechBadge} from "@/app/components/tech_badge"
 
 const experiences = [
     {
-        company: "N2 Sistemas de Gestão Empresarial",
+        company: "N2 Sistemas - Soluções comerciais e empresariais",
         role: "Estagiário de Desenvolvimento de Software",
         duration: "Julho 2025 - Momento Atual • (1 mês)",
-        description: "Atuação no desenvolvimento de soluçõe desktop com Pascal e Lazarus, e desenvolvimento de banco de dados com SQL Server.",
-        technologies: ['Pascal', 'Lazarus', 'SQL Server']
+        description: "Atuação no desenvolvimento de soluções desktop com Pascal e Lazarus, e desenvolvimento de banco de dados com SQL Server.",
+        technologies: ['Pascal', 'Lazarus', 'SQL Server', 'Linux']
     },
     {
         company: "Freelancer",
