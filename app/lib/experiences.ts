@@ -14,7 +14,7 @@ export const experiences: Experience[] = [
         startDate: new Date(2025, 6, 1),
         endDate: null,
         description: "Atuação no desenvolvimento de soluções desktop com Pascal e Lazarus, e desenvolvimento de banco de dados com SQL Server.",
-        technologies: ['Pascal', 'Lazarus', 'SQL Server', 'Linux']
+        technologies: ['Pascal', 'Lazarus', 'Delphi', 'SQL Server', 'Linux', 'ERP']
     },
     {
         company: "Freelancer",
