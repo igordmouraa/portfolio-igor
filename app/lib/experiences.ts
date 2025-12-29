@@ -12,7 +12,7 @@ export const experiences: Experience[] = [
         company: "N2 Sistemas - Soluções comerciais e empresariais",
         role: "Estagiário de Desenvolvimento de Software",
         startDate: new Date(2025, 6, 1),
-        endDate: null,
+        endDate: new Date(2025, 12, 30),
         description: "Atuação no desenvolvimento de soluções desktop com Pascal e Lazarus, e desenvolvimento de banco de dados com SQL Server.",
         technologies: ['Pascal', 'Lazarus', 'Delphi', 'SQL Server', 'Linux', 'ERP']
     },
