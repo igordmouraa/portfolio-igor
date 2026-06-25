@@ -5,9 +5,19 @@ export type Project = {
     github: string;
     demo?: string;
     image: string;
+    imageFit?: 'cover' | 'contain';
 };
 
 export const projects: Project[] = [
+    {
+        title: 'Last.fm Weekly — Cápsula semanal em música',
+        description:
+            'Gerador de cápsulas visuais a partir dos scrobbles do Last.fm. Informe seu usuário, descubra top artistas e faixas da semana e exporte em formato Stories 9:16 em HD, integrando a API oficial do Last.fm.',
+        technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Last.fm API'],
+        github: 'https://github.com/igordmouraa/lastfm-weekly',
+        demo: 'https://lastfm-weekly.vercel.app/',
+        image: '/images/lastfm-weekly.png',
+    },
     {
         title: "PetExpress - Sistema de gerenciador de Pet Shops",
         description: "PetExpress é um sistema completo para pet shops, focado em escalabilidade e usabilidade. Permite gerenciar pets, produtos, agendamentos e pagamentos. O projeto reforçou meu domínio em APIs RESTful, autenticação por perfil e arquitetura de software.",
@@ -30,6 +40,6 @@ export const projects: Project[] = [
         technologies: ["Node.js", "TypeScript", "Inquirer.js", "Chalk", "Express", "Fastify"],
         github: "https://github.com/ScaffoldAPI/scaffold",
         demo: "https://www.npmjs.com/package/scaffold-api",
-        image: "/images/icon.png"
+        image: '/images/icon.png',
     },
 ];
