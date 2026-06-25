@@ -1,0 +1,119 @@
+{
+  "nav": {
+    "home": "Home",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, my name is",
+    "name": "Igor Moura",
+    "description": "I am a full-stack developer who is constantly evolving, with a focus on Node.js, React, and TypeScript. I aim to deliver scalable, high-quality solutions on challenging projects.",
+    "viewSkills": "View my skills",
+    "contact": "Contact me",
+    "roles": ["Full-Stack Developer", "Node.js Specialist", "React Engineer"],
+    "nowPlayingLabel": "Listening to"
+  },
+  "skills": {
+    "title": "My Skills",
+    "subtitle": "competencies",
+    "experienceText": "of experience",
+    "featuredTitle": "Featured",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "devops": "DevOps",
+      "tools": "Tools"
+    }
+  },
+  "projectsSection": {
+    "title": "Highlighted Projects",
+    "subtitle": "highlights",
+    "repository": "Repository",
+    "viewProject": "View project",
+    "prev": "Previous project",
+    "next": "Next project",
+    "slideCounter": "{current} / {total}"
+  },
+  "experienceSection": {
+    "title": "Professional Experience",
+    "subtitle": "experiences",
+    "present": "Present"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "contact",
+    "description": "Have a project in mind or want to discuss opportunities? Send me a message.",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@email.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Write your message...",
+    "submit": "Send message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Failed to send message. Please try again.",
+    "validation": {
+      "nameMin": "Name must be at least 2 characters",
+      "emailInvalid": "Invalid email address",
+      "messageMin": "Message must be at least 10 characters"
+    }
+  },
+  "footer": {
+    "madeWith": "Made with",
+    "by": "by",
+    "rights": "All rights reserved."
+  },
+  "a11y": {
+    "toggleLanguage": "Toggle language",
+    "toggleTheme": "Toggle theme",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "visitSocial": "Visit {label}",
+    "viewProject": "View project {title}",
+    "projectThumbnail": "Thumbnail for project {title}",
+    "profilePhoto": "Photo of Igor Moura",
+    "nowPlaying": "Listening to {artist} — {track} on Last.fm",
+    "projectSlide": "Go to {title} ({current} of {total})"
+  },
+  "metadata": {
+    "title": "Portfolio | Igor Moura - Full-Stack Developer",
+    "description": "Portfolio of Igor Moura, a Full-Stack developer specialized in Node.js, React, Next.js, and TypeScript. Explore my projects, skills, and professional journey.",
+    "ogDescription": "Explore Igor Moura's projects and career.",
+    "ogImageAlt": "Preview of Igor Moura's Portfolio"
+  },
+  "projects": [
+    {
+      "title": "Last.fm Weekly — Weekly Music Capsule",
+      "description": "Visual capsule generator from Last.fm scrobbles. Enter your username, discover your top artists and tracks of the week, and export as HD 9:16 Stories powered by the official Last.fm API."
+    },
+    {
+      "title": "PetExpress - Pet Shop Management System",
+      "description": "PetExpress is a complete pet shop system focused on scalability and usability. It enables you to manage pets, products, appointments, and payments. The project reinforced my mastery of RESTful APIs, profile-based authentication, and software architecture."
+    },
+    {
+      "title": "Marvel Comics Website",
+      "description": "An application to explore the Marvel universe, with a focus on modularity and component reuse. The main challenge was authenticating with the Marvel API and dynamic pagination, strengthening my experience working with complex APIs."
+    },
+    {
+      "title": "Scaffold CLI",
+      "description": "A CLI that automates API creation with support for MySQL, PostgreSQL, and MongoDB. The challenge was building a flexible generator, deepening my knowledge of automating project setup and integrating with multiple databases."
+    }
+  ],
+  "experiences": [
+    {
+      "role": "Full-Stack Developer",
+      "description": "Full-stack development on the PetroFull fuel industry platform. Building features with React, TypeScript, and NestJS, including AI integrations and the Meta WhatsApp Business API, plus REST APIs backed by PostgreSQL."
+    },
+    {
+      "role": "Software Development Intern",
+      "description": "Developed desktop solutions with Pascal and Lazarus and worked with SQL Server databases."
+    },
+    {
+      "role": "Full-Stack Developer",
+      "description": "Developed and maintained responsive web interfaces with React, Next.js, and TypeScript. On the backend, built scalable APIs with Node.js and NestJS, integrating databases such as PostgreSQL and Firebase. Used Docker for development environments and Vercel for deployments."
+    }
+  ]
+}

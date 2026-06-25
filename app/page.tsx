@@ -1,18 +1,17 @@
-import {HeroSection} from "@/app/components/pagess/home/hero_section";
-import {KnowTechs} from "@/app/components/pagess/home/know_techs";
-import {HighlightedProjects} from "@/app/components/pagess/home/highlighted-projects";
-import {ProfessionalExperience} from "@/app/components/pagess/home/professional-experience";
-import {HorizontalDivider} from "@/app/components/divider";
+import { HeroSection } from '@/app/components/sections/home/hero-section';
+import { SkillsSection } from '@/app/components/sections/home/skills-section';
+import { ProjectsSection } from '@/app/components/sections/home/projects-section';
+import { ExperienceSection } from '@/app/components/sections/home/experience-section';
+import { ContactSection } from '@/app/components/sections/home/contact-section';
 
-export default async function Home() {
+export default function Home() {
     return (
         <main>
-            <div id="home"><HeroSection/></div>
-            <div id="techs"><KnowTechs/></div>
-            <HorizontalDivider className="my-0"/>
-            <div id="projects"><HighlightedProjects/></div>
-            <HorizontalDivider className="my-0"/>
-            <div id="experience"><ProfessionalExperience/></div>
+            <HeroSection />
+            <SkillsSection />
+            <ProjectsSection />
+            <ExperienceSection />
+            <ContactSection />
         </main>
-    )
+    );
 }
