@@ -3,13 +3,44 @@
 @tailwind utilities;
 
 @layer base {
+    :root {
+        --color-background: 222 232 246;
+        --color-surface: 236 242 250;
+        --color-border: 196 208 224;
+        --color-primary: 75 117 255;
+        --color-primary-muted: 75 117 255;
+        --color-accent: 6 182 212;
+        --color-text: 17 24 39;
+        --color-text-muted: 107 114 128;
+    }
+
+    .dark {
+        --color-background: 17 24 39;
+        --color-surface: 31 41 55;
+        --color-border: 55 65 81;
+        --color-primary: 97 60 193;
+        --color-primary-muted: 129 90 213;
+        --color-accent: 167 139 250;
+        --color-text: 243 244 246;
+        --color-text-muted: 156 163 175;
+    }
+
     body {
-        @apply bg-gray-900 text-gray-100
+        background-color: rgb(var(--color-background));
+        background-image: radial-gradient(
+            ellipse 100% 80% at 50% -30%,
+            rgb(var(--color-primary) / 0.07),
+            transparent 70%
+        );
+        color: rgb(var(--color-text));
+        transition: background-color 0.3s ease, color 0.3s ease;
     }
 }
 
-.container {
-    @apply mx-auto w-full max-w-[1200px] px-6
+@layer components {
+    .container {
+        @apply mx-auto w-full max-w-[1200px] px-6;
+    }
 }
 
 *::-webkit-scrollbar {
@@ -17,13 +48,23 @@
 }
 
 *::-webkit-scrollbar-track {
-    background: #374151;
+    background: rgb(var(--color-surface));
     border-radius: 5px;
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: #613cc1;
+    background-color: rgb(var(--color-primary));
     border-radius: 14px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
 @keyframes gradient {
@@ -41,4 +82,212 @@
 .bg-gradient-animated {
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
+}
+
+/* ── Particle background layers ── */
+.particle-aurora {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    will-change: transform;
+}
+
+.particle-aurora--primary {
+    width: 55%;
+    height: 45%;
+    top: -10%;
+    left: -5%;
+    background: rgb(var(--color-primary));
+    animation: particle-drift-a 22s ease-in-out infinite;
+}
+
+.particle-aurora--accent {
+    width: 45%;
+    height: 40%;
+    bottom: -5%;
+    right: -8%;
+    background: rgb(var(--color-accent));
+    animation: particle-drift-b 26s ease-in-out infinite;
+}
+
+.particle-aurora--mesh {
+    width: 35%;
+    height: 35%;
+    top: 35%;
+    left: 38%;
+    background: linear-gradient(
+        135deg,
+        rgb(var(--color-primary) / 0.8),
+        rgb(var(--color-accent) / 0.6)
+    );
+    animation: particle-drift-c 30s ease-in-out infinite;
+}
+
+.particle-vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        ellipse 85% 70% at 50% 45%,
+        transparent 30%,
+        rgb(var(--color-background) / 0.35) 100%
+    );
+    pointer-events: none;
+}
+
+.particle-grid {
+    position: absolute;
+    inset: 0;
+    opacity: 0.035;
+    background-image:
+        linear-gradient(rgb(var(--color-primary) / 0.5) 1px, transparent 1px),
+        linear-gradient(90deg, rgb(var(--color-primary) / 0.5) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black, transparent);
+    pointer-events: none;
+}
+
+.dark .particle-grid {
+    opacity: 0.055;
+}
+
+@keyframes particle-drift-a {
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+    33% {
+        transform: translate(8%, 6%) scale(1.08);
+    }
+    66% {
+        transform: translate(-4%, 10%) scale(0.95);
+    }
+}
+
+@keyframes particle-drift-b {
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+    40% {
+        transform: translate(-10%, -6%) scale(1.1);
+    }
+    70% {
+        transform: translate(6%, -8%) scale(0.92);
+    }
+}
+
+@keyframes particle-drift-c {
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+        transform: translate(5%, -5%) rotate(12deg);
+    }
+}
+
+.particle-aurora--compact .particle-aurora {
+    filter: blur(100px);
+}
+
+.particle-aurora--compact .particle-aurora--primary {
+    width: 80%;
+    height: 50%;
+    top: -20%;
+    left: -20%;
+}
+
+.particle-aurora--compact .particle-aurora--accent {
+    width: 70%;
+    height: 45%;
+    bottom: -15%;
+    right: -20%;
+}
+
+@media (max-width: 767px) {
+    .particle-grid {
+        display: none;
+    }
+
+    .particle-aurora {
+        filter: blur(96px);
+    }
+
+    .particle-vignette {
+        background: radial-gradient(
+            ellipse 95% 80% at 50% 40%,
+            transparent 20%,
+            rgb(var(--color-background) / 0.45) 100%
+        );
+    }
+}
+
+/* ── Skills: marquee + manifest ── */
+.skills-marquee {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 8%,
+        black 92%,
+        transparent
+    );
+}
+
+.skills-marquee__row {
+    overflow: hidden;
+}
+
+.skills-marquee__track {
+    display: flex;
+    width: max-content;
+    gap: 2.5rem;
+    animation: skills-marquee linear infinite;
+}
+
+.skills-marquee__track--reverse {
+    animation-direction: reverse;
+}
+
+.skills-marquee__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: rgb(var(--color-text-muted));
+    opacity: 0.7;
+    transition: opacity 0.2s, color 0.2s;
+}
+
+.skills-marquee__item:hover {
+    opacity: 1;
+    color: rgb(var(--color-primary));
+}
+
+@keyframes skills-marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skills-marquee__track {
+        animation: none;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .skills-marquee__row {
+        overflow: visible;
+    }
+
+    .skills-marquee {
+        mask-image: none;
+    }
 }
