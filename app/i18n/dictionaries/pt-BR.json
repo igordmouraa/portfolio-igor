@@ -86,8 +86,8 @@
   },
   "projects": [
     {
-      "title": "Last.fm Weekly — Cápsula semanal em música",
-      "description": "Gerador de cápsulas visuais a partir dos scrobbles do Last.fm. Informe seu usuário, descubra top artistas e faixas da semana e exporte em formato Stories 9:16 em HD, integrando a API oficial do Last.fm."
+      "title": "Weekster Hub — Hub visual do Last.fm",
+      "description": "Plataforma completa para visualizar scrobbles do Last.fm: dashboard com digest semanal, grade de álbuns exportável, cápsulas Stories 9:16, wrapped por período, comparação entre usuários, charts globais e exploração por tags — com app shell, APIs server-side e export PNG em HD."
     },
     {
       "title": "PetExpress - Sistema de gerenciador de Pet Shops",

@@ -86,8 +86,8 @@
   },
   "projects": [
     {
-      "title": "Last.fm Weekly — Weekly Music Capsule",
-      "description": "Visual capsule generator from Last.fm scrobbles. Enter your username, discover your top artists and tracks of the week, and export as HD 9:16 Stories powered by the official Last.fm API."
+      "title": "Weekster Hub — Last.fm Visual Hub",
+      "description": "Full platform to visualize Last.fm scrobbles: dashboard with weekly digest, exportable album collage, 9:16 Story capsules, period-based wrapped, user comparison, global charts, and tag exploration — with an app shell, server-side APIs, and HD PNG export."
     },
     {
       "title": "PetExpress - Pet Shop Management System",

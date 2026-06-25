@@ -128,9 +128,9 @@
 </tr>
 <tr>
 <td align="center"><img src="https://cdn.simpleicons.org/lastdotfm/D51007" width="28" alt="Last.fm" /></td>
-<td align="left"><strong>Last.fm Weekly</strong><br/><sub>Cápsulas visuais semanais em Stories 9:16</sub></td>
-<td align="center"><img src="https://skillicons.dev/icons?i=nextjs,ts,tailwind&perline=3" height="24" alt="Next.js, TS, Tailwind" /></td>
-<td align="center"><a href="https://lastfm-weekly.vercel.app/"><img src="https://img.shields.io/badge/↗_Demo-6366f1?style=flat-square" alt="Demo Last.fm Weekly" /></a></td>
+<td align="left"><strong>Weekster Hub</strong><br/><sub>Dashboard, grades, cápsulas e wrapped do Last.fm</sub></td>
+<td align="center"><img src="https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,recharts&perline=5" height="24" alt="Next.js, React, TS, Tailwind, Recharts" /></td>
+<td align="center"><a href="https://weekster-hub.vercel.app/"><img src="https://img.shields.io/badge/↗_Demo-6366f1?style=flat-square" alt="Demo Weekster Hub" /></a></td>
 </tr>
 <tr>
 <td align="center"><img src="https://cdn.simpleicons.org/react/61DAFB" width="28" alt="React" /></td>

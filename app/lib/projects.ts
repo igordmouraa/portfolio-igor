@@ -10,13 +10,13 @@ export type Project = {
 
 export const projects: Project[] = [
     {
-        title: 'Last.fm Weekly — Cápsula semanal em música',
+        title: 'Weekster Hub — Hub visual do Last.fm',
         description:
-            'Gerador de cápsulas visuais a partir dos scrobbles do Last.fm. Informe seu usuário, descubra top artistas e faixas da semana e exporte em formato Stories 9:16 em HD, integrando a API oficial do Last.fm.',
-        technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Last.fm API'],
+            'Plataforma completa para visualizar scrobbles do Last.fm: dashboard com digest semanal, grade de álbuns exportável, cápsulas Stories 9:16, wrapped por período, comparação entre usuários, charts globais e exploração por tags — com app shell, APIs server-side e export PNG em HD.',
+        technologies: ['Next.js', 'React 19', 'TypeScript', 'Tailwind CSS 4', 'Framer Motion', 'Recharts', 'Last.fm API'],
         github: 'https://github.com/igordmouraa/lastfm-weekly',
-        demo: 'https://lastfm-weekly.vercel.app/',
-        image: '/images/lastfm-weekly.png',
+        demo: 'https://weekster-hub.vercel.app/',
+        image: '/images/weekster-hub.png',
     },
     {
         title: "PetExpress - Sistema de gerenciador de Pet Shops",
