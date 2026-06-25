@@ -1,0 +1,119 @@
+{
+  "nav": {
+    "home": "Home",
+    "skills": "Competências",
+    "projects": "Projetos",
+    "experience": "Experiência",
+    "contact": "Contato"
+  },
+  "hero": {
+    "greeting": "Olá, meu nome é",
+    "name": "Igor Moura",
+    "description": "Sou um desenvolvedor full-stack em constante evolução, com foco em Node.js, React e TypeScript. Busco contribuir com soluções escaláveis e de alta qualidade em projetos desafiadores.",
+    "viewSkills": "Ver minhas skills",
+    "contact": "Entre em contato",
+    "roles": ["Desenvolvedor Full-Stack", "Especialista em Node.js", "Engenheiro React"],
+    "nowPlayingLabel": "Ouvindo"
+  },
+  "skills": {
+    "title": "Minhas Skills",
+    "subtitle": "competências",
+    "experienceText": "de experiência",
+    "featuredTitle": "Principais",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "devops": "DevOps",
+      "tools": "Ferramentas"
+    }
+  },
+  "projectsSection": {
+    "title": "Projetos em Destaque",
+    "subtitle": "destaques",
+    "repository": "Repositório",
+    "viewProject": "Ver projeto",
+    "prev": "Projeto anterior",
+    "next": "Próximo projeto",
+    "slideCounter": "{current} / {total}"
+  },
+  "experienceSection": {
+    "title": "Experiência Profissional",
+    "subtitle": "experiências",
+    "present": "O momento"
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "subtitle": "contato",
+    "description": "Tem um projeto em mente ou quer conversar sobre oportunidades? Envie uma mensagem.",
+    "nameLabel": "Nome",
+    "namePlaceholder": "Seu nome",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "seu@email.com",
+    "messageLabel": "Mensagem",
+    "messagePlaceholder": "Escreva sua mensagem...",
+    "submit": "Enviar mensagem",
+    "sending": "Enviando...",
+    "success": "Mensagem enviada com sucesso!",
+    "error": "Erro ao enviar mensagem. Tente novamente.",
+    "validation": {
+      "nameMin": "Nome deve ter pelo menos 2 caracteres",
+      "emailInvalid": "E-mail inválido",
+      "messageMin": "Mensagem deve ter pelo menos 10 caracteres"
+    }
+  },
+  "footer": {
+    "madeWith": "Feito com",
+    "by": "por",
+    "rights": "Todos os direitos reservados."
+  },
+  "a11y": {
+    "toggleLanguage": "Alternar idioma",
+    "toggleTheme": "Alternar tema",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "visitSocial": "Visitar {label}",
+    "viewProject": "Ver projeto {title}",
+    "projectThumbnail": "Miniatura do projeto {title}",
+    "profilePhoto": "Foto de Igor Moura",
+    "nowPlaying": "Ouvindo {artist} — {track} no Last.fm",
+    "projectSlide": "Ir para {title} ({current} de {total})"
+  },
+  "metadata": {
+    "title": "Portfólio | Igor Moura - Desenvolvedor Full-Stack",
+    "description": "Portfólio de Igor Moura, desenvolvedor Full-Stack especializado em Node.js, React, Next.js e TypeScript. Explore meus projetos, habilidades e trajetória profissional.",
+    "ogDescription": "Explore os projetos e a carreira de Igor Moura.",
+    "ogImageAlt": "Preview do Portfólio de Igor Moura"
+  },
+  "projects": [
+    {
+      "title": "Last.fm Weekly — Cápsula semanal em música",
+      "description": "Gerador de cápsulas visuais a partir dos scrobbles do Last.fm. Informe seu usuário, descubra top artistas e faixas da semana e exporte em formato Stories 9:16 em HD, integrando a API oficial do Last.fm."
+    },
+    {
+      "title": "PetExpress - Sistema de gerenciador de Pet Shops",
+      "description": "PetExpress é um sistema completo para pet shops, focado em escalabilidade e usabilidade. Permite gerenciar pets, produtos, agendamentos e pagamentos. O projeto reforçou meu domínio em APIs RESTful, autenticação por perfil e arquitetura de software."
+    },
+    {
+      "title": "Website Marvel Comics",
+      "description": "Aplicação para explorar o universo da Marvel, com foco em modularidade e reutilização de componentes. O principal desafio foi a autenticação com a API da Marvel e a paginação dinâmica, fortalecendo meus conhecimentos em consumo de APIs complexas."
+    },
+    {
+      "title": "Scaffold CLI",
+      "description": "Uma CLI que automatiza a criação de APIs com suporte a MySQL, PostgreSQL e MongoDB. O desafio foi criar um gerador flexível, aprofundando meus conhecimentos em automação de setups e integração com múltiplos bancos de dados."
+    }
+  ],
+  "experiences": [
+    {
+      "role": "Desenvolvedor Full-Stack",
+      "description": "Desenvolvimento full-stack na plataforma PetroFull para o setor de combustíveis. Atuação com React, TypeScript e NestJS, incluindo integrações com IA e a API oficial do WhatsApp (Meta), além de APIs REST com PostgreSQL."
+    },
+    {
+      "role": "Estagiário de Desenvolvimento de Software",
+      "description": "Atuação no desenvolvimento de soluções desktop com Pascal e Lazarus, e desenvolvimento de banco de dados com SQL Server."
+    },
+    {
+      "role": "Desenvolvedor Full-Stack",
+      "description": "Desenvolvimento e manutenção de interfaces web responsivas com React, Next.js e TypeScript. No backend, criação de APIs escaláveis com Node.js e NestJS, integrando bancos de dados como PostgreSQL e Firebase. Utilização de Docker para ambientes e Vercel para deploys."
+    }
+  ]
+}
